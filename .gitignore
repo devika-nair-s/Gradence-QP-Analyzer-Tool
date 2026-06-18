@@ -25,3 +25,17 @@ models/bloom_classifier/bloom_model.pkl
 
 # VS Code
 .vscode/
+
+__pycache__/
+*.pyc
+venv/
+.paddlex/
+.vscode/
+
+ocr_output.txt
+raw_ocr.txt
+final_text.txt
+cleaned_text.txt
+cleaned_debug.txt
+
+*.log
