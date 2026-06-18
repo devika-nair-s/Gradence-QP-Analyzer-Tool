@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# Mac
+.DS_Store
+
+# OCR Outputs
+ocr_output.txt
+raw_ocr.txt
+final_text.txt
+
+# Temporary Files
+*.log
+
+# Model Files
+models/distilbert/pytorch_model.bin
+models/bloom_classifier/bloom_model.pkl
+
+# Paddle Models
+.paddlex/
+
+# VS Code
+.vscode/

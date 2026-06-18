@@ -1,0 +1,974 @@
+{
+  "subjects": {
+    "Data Structures and Algorithms": {
+      "keywords": [
+        "array",
+        "stack",
+        "queue",
+        "linked list",
+        "tree",
+        "graph",
+        "sorting",
+        "searching",
+        "recursion",
+        "infix",
+        "postfix",
+        "prefix",
+        "bst",
+        "avl",
+        "hashing",
+        "time complexity",
+        "space complexity",
+        "adt",
+        "deque",
+        "priority queue",
+        "circular queue",
+        "huffman",
+        "traversal",
+        "dfs",
+        "bfs",
+        "binary search tree",
+        "polynomial addition",
+        "expression tree"
+      ]
+    },
+    "Discrete Structures and Graph Theory": {
+      "keywords": [
+        "propositional logic",
+        "predicate logic",
+        "quantifiers",
+        "normal forms",
+        "truth table",
+        "boolean algebra",
+        "set theory",
+        "venn diagram",
+        "relations",
+        "functions",
+        "poset",
+        "hasse diagram",
+        "lattice",
+        "permutation",
+        "combination",
+        "probability",
+        "bayes theorem",
+        "markov chain",
+        "algebraic structures",
+        "group",
+        "ring",
+        "semi group",
+        "monoid",
+        "graph theory",
+        "planar graph",
+        "hamiltonian",
+        "euler graph",
+        "graph coloring",
+        "dijkstra",
+        "warshall",
+        "pigeonhole principle",
+        "recurrence relations",
+        "coding theory"
+      ]
+    },
+    "Database Management Systems": {
+      "keywords": [
+        "database",
+        "dbms",
+        "rdbms",
+        "sql",
+        "query",
+        "table",
+        "entity",
+        "relationship",
+        "er model",
+        "eer model",
+        "normalization",
+        "1nf",
+        "2nf",
+        "3nf",
+        "bcnf",
+        "4nf",
+        "functional dependency",
+        "key",
+        "primary key",
+        "foreign key",
+        "candidate key",
+        "transaction",
+        "acid",
+        "concurrency",
+        "serializability",
+        "lock",
+        "deadlock",
+        "recovery",
+        "log",
+        "join",
+        "view",
+        "trigger",
+        "stored procedure",
+        "index",
+        "distributed database",
+        "multimedia database",
+        "cloud database",
+        "data independence"
+      ]
+    },
+    "Quantitative Analysis": {
+      "keywords": [
+        "regression",
+        "correlation",
+        "hypothesis",
+        "estimator",
+        "moments",
+        "distribution",
+        "likelihood",
+        "mae",
+        "mape",
+        "skewness",
+        "kurtosis",
+        "sample",
+        "variance",
+        "mean",
+        "coefficient",
+        "null",
+        "alternative"
+      ]
+    },
+    "Mathematics": {
+      "keywords": [
+        "and f-distributions: exact sampling distributions",
+        "applications of eigenvalues and eigenvectors in machine learning",
+        "bayesian statistics and its applications",
+        "binary data",
+        "bracketing methods bisection method",
+        "chi square",
+        "cleaning and preparing data",
+        "deciding appropriate machine learning models",
+        "discrete data",
+        "dot plot",
+        "draw conclusions",
+        "eigen values and eigen vectors",
+        "exponential graph",
+        "factor analysis",
+        "false position method",
+        "feature engineering",
+        "frequency distribution graph",
+        "graph-based data structures in python",
+        "handling imbalanced datasets in machine learning",
+        "histogram",
+        "hyperparameter tuning in machine learning models",
+        "introduction",
+        "introduction to dimension reduction algorithms",
+        "isometric feature mapping",
+        "linear dimensionality reduction: principal component analysis",
+        "linear discriminant analysis",
+        "logarithmic graph",
+        "methods of optimization-numerical optimization",
+        "minimal polynomial",
+        "missing values",
+        "need of exploratory data analysis",
+        "newton's method",
+        "non-linear dimensionality reduction: multidimensional scaling",
+        "ordinary data",
+        "penalty function method",
+        "piechart",
+        "plotting data using bar graph",
+        "principal component analysis (pca) vs. linear discriminant analysis (lda)",
+        "quantitative vs. qualitative data",
+        "random sampling",
+        "random variables and their probability distribution",
+        "sample characteristics and their distributions",
+        "scatter plot",
+        "solving linear equations",
+        "steepest descent method",
+        "stem and leaf plot",
+        "t-",
+        "the central limit theorem",
+        "the four fundamental subspaces",
+        "the singular value decomposition",
+        "time-series graph",
+        "trigonometric graph",
+        "types of optimization-constrained and unconstrained optimization",
+        "types of qualitative data: categorical data",
+        "types of quantitative data: continuous data",
+        "understanding dataset through various plots and graphs",
+        "vectors and matrices"
+      ]
+    }
+  },
+  "co_mappings": {
+    "Discrete Structures and Graph Theory": {
+      "CO1": {
+        "name": "Logic",
+        "keywords": [
+          "propositional logic",
+          "predicate logic",
+          "laws of logic",
+          "quantifiers",
+          "universal quantifier",
+          "existential quantifier",
+          "normal forms",
+          "cnf",
+          "dnf",
+          "conjunctive normal form",
+          "disjunctive normal form",
+          "inference theory",
+          "predicate calculus",
+          "truth table",
+          "boolean algebra"
+        ]
+      },
+      "CO2": {
+        "name": "Relations and Functions",
+        "keywords": [
+          "set theory",
+          "sets",
+          "venn diagram",
+          "operation on sets",
+          "union",
+          "intersection",
+          "partition of set",
+          "relations",
+          "types of relations",
+          "reflexive",
+          "symmetric",
+          "transitive",
+          "representation of relations",
+          "closure of relations",
+          "warshall's algorithm",
+          "equivalence relations",
+          "equivalence classes",
+          "functions",
+          "types of functions",
+          "injective",
+          "surjective",
+          "bijective",
+          "composition of functions",
+          "identity function",
+          "inverse function",
+          "operation on relations"
+        ]
+      },
+      "CO3": {
+        "name": "Posets and Lattice",
+        "keywords": [
+          "posets",
+          "partial order relations",
+          "poset",
+          "hasse diagram",
+          "chain",
+          "anti chain",
+          "lattice",
+          "types of lattice",
+          "sub lattice"
+        ]
+      },
+      "CO4": {
+        "name": "Permutation, Combination and Discrete Probability",
+        "keywords": [
+          "permutation",
+          "combination",
+          "rules of sum and product",
+          "counting principles",
+          "pigeonhole principle",
+          "recurrence relations",
+          "solving recurrence relations",
+          "random experiment",
+          "sample space",
+          "events",
+          "axioms of probability",
+          "conditional probability",
+          "theorem of total probability",
+          "bayes' theorem",
+          "bayes theorem",
+          "application to information theory",
+          "discrete probability",
+          "markov chains"
+        ]
+      },
+      "CO5": {
+        "name": "Algebraic Structures",
+        "keywords": [
+          "algebraic structures",
+          "binary operation",
+          "semi group",
+          "monoid",
+          "groups",
+          "subgroups",
+          "abelian group",
+          "cyclic group",
+          "isomorphism",
+          "ring",
+          "coding theory",
+          "binary information",
+          "error detection",
+          "error correction",
+          "cryptography"
+        ]
+      },
+      "CO6": {
+        "name": "Graph Theory",
+        "keywords": [
+          "graph theory",
+          "types of graphs",
+          "graph representation",
+          "sub graphs",
+          "operations on graphs",
+          "walk",
+          "path",
+          "circuit",
+          "connected graphs",
+          "disconnected graph",
+          "components",
+          "homomorphism",
+          "isomorphism of graphs",
+          "euler graph",
+          "hamiltonian graphs",
+          "planar graph",
+          "cut set",
+          "cut vertex",
+          "graph coloring",
+          "graph traversals algorithm",
+          "bfs",
+          "dfs",
+          "dijkstra's algorithm",
+          "dijkstra"
+        ]
+      }
+    },
+    "Database Management Systems": {
+      "CO1": {
+        "name": "Introduction to Database Concepts and Data modeling",
+        "keywords": [
+          "introduction to database",
+          "characteristics of databases",
+          "file system vs database system",
+          "data abstraction",
+          "data independence",
+          "dbms architecture",
+          "three schema architecture",
+          "applications of databases",
+          "dbms system"
+        ]
+      },
+      "CO2": {
+        "name": "The Entity-Relationship (ER) Model and Relational Model",
+        "keywords": [
+          "entity relationship model",
+          "er model",
+          "entity types",
+          "weak entity",
+          "strong entity",
+          "entity sets",
+          "attributes",
+          "keys",
+          "relationship constraints",
+          "cardinality",
+          "participation",
+          "extended er",
+          "eer model",
+          "generalization",
+          "specialization",
+          "aggregation",
+          "relational model",
+          "relational schema",
+          "mapping er to relational",
+          "mapping eer to relational",
+          "relational algebra",
+          "operators in relational algebra",
+          "algebra queries"
+        ]
+      },
+      "CO3": {
+        "name": "Structured Query Language (SQL)",
+        "keywords": [
+          "sql",
+          "overview of sql",
+          "data definition",
+          "ddl",
+          "data manipulation",
+          "dml",
+          "data control",
+          "dcl",
+          "integrity constraints",
+          "key constraints",
+          "domain constraints",
+          "referential integrity",
+          "check constraints",
+          "set operations",
+          "string operations",
+          "aggregate functions",
+          "group by",
+          "having",
+          "nested queries",
+          "subqueries",
+          "complex queries",
+          "triggers",
+          "views",
+          "stored procedures",
+          "introduction to pl/sql"
+        ]
+      },
+      "CO4": {
+        "name": "Database Normalization",
+        "keywords": [
+          "pitfalls in relational database",
+          "relational database design",
+          "concept of normalization",
+          "functional dependencies",
+          "fd",
+          "first normal form",
+          "1nf",
+          "second normal form",
+          "2nf",
+          "third normal form",
+          "3nf",
+          "bcnf",
+          "boyce codd normal form",
+          "fourth normal form",
+          "4nf",
+          "5nf"
+        ]
+      },
+      "CO5": {
+        "name": "Transactions Management, Concurrency Control and Recovery",
+        "keywords": [
+          "transaction concept",
+          "transaction states",
+          "acid properties",
+          "transaction control commands",
+          "concurrency execution",
+          "serializability",
+          "conflict serializability",
+          "view serializability",
+          "concurrency control",
+          "lock based protocol",
+          "timestamp based protocol",
+          "recovery system",
+          "log based recovery",
+          "deadlock handling",
+          "deadlock prevention",
+          "deadlock detection"
+        ]
+      },
+      "CO6": {
+        "name": "Introduction to Emerging databases",
+        "keywords": [
+          "limitations of conventional databases",
+          "multimedia databases",
+          "data types in multimedia",
+          "contents of multimedia databases",
+          "cloud databases",
+          "introduction to distributed databases",
+          "design steps for distributed databases",
+          "types of distributed databases",
+          "storage methods"
+        ]
+      }
+    },
+    "Quantitative Analysis": {
+      "CO1": {
+        "name": "Estimation Theory",
+        "keywords": [
+          "moments",
+          "estimator",
+          "likelihood",
+          "mle",
+          "properties of good estimator"
+        ]
+      },
+      "CO2": {
+        "name": "Regression and Correlation",
+        "keywords": [
+          "regression",
+          "correlation",
+          "mae",
+          "mape",
+          "ssr",
+          "sse",
+          "coefficient of determination"
+        ]
+      },
+      "CO3": {
+        "name": "Hypothesis Testing",
+        "keywords": [
+          "null",
+          "alternative",
+          "hypothesis",
+          "significance level",
+          "f-test"
+        ]
+      },
+      "CO4": {
+        "name": "Probability Distributions",
+        "keywords": [
+          "normal distribution",
+          "skewness",
+          "kurtosis",
+          "mean",
+          "variance"
+        ]
+      }
+    },
+    "Mathematics": {
+      "CO1": {
+        "name": "Linear Algebra",
+        "keywords": [
+          "vectors and matrices",
+          "solving linear equations",
+          "the four fundamental subspaces",
+          "eigen values and eigen vectors",
+          "the singular value decomposition",
+          "applications of eigenvalues and eigenvectors in machine learning"
+        ]
+      },
+      "CO2": {
+        "name": "Probability and Statistics",
+        "keywords": [
+          "introduction",
+          "random variables and their probability distribution",
+          "random sampling",
+          "sample characteristics and their distributions",
+          "chi square",
+          "t-",
+          "and f-distributions: exact sampling distributions",
+          "the central limit theorem",
+          "bayesian statistics and its applications"
+        ]
+      },
+      "CO3": {
+        "name": "Introduction to Graphs",
+        "keywords": [
+          "quantitative vs. qualitative data",
+          "types of quantitative data: continuous data",
+          "discrete data",
+          "types of qualitative data: categorical data",
+          "binary data",
+          "ordinary data",
+          "plotting data using bar graph",
+          "piechart",
+          "histogram",
+          "stem and leaf plot",
+          "dot plot",
+          "scatter plot",
+          "time-series graph",
+          "exponential graph",
+          "logarithmic graph",
+          "trigonometric graph",
+          "frequency distribution graph",
+          "graph-based data structures in python"
+        ]
+      },
+      "CO4": {
+        "name": "Exploratory Data Analysis",
+        "keywords": [
+          "need of exploratory data analysis",
+          "cleaning and preparing data",
+          "feature engineering",
+          "missing values",
+          "understanding dataset through various plots and graphs",
+          "draw conclusions",
+          "deciding appropriate machine learning models",
+          "handling imbalanced datasets in machine learning"
+        ]
+      },
+      "CO5": {
+        "name": "Optimization Techniques",
+        "keywords": [
+          "types of optimization-constrained and unconstrained optimization",
+          "methods of optimization-numerical optimization",
+          "bracketing methods bisection method",
+          "false position method",
+          "newton's method",
+          "steepest descent method",
+          "penalty function method",
+          "hyperparameter tuning in machine learning models"
+        ]
+      },
+      "CO6": {
+        "name": "Dimension Reduction Algorithm",
+        "keywords": [
+          "introduction to dimension reduction algorithms",
+          "linear dimensionality reduction: principal component analysis",
+          "factor analysis",
+          "linear discriminant analysis",
+          "non-linear dimensionality reduction: multidimensional scaling",
+          "isometric feature mapping",
+          "minimal polynomial",
+          "principal component analysis (pca) vs. linear discriminant analysis (lda)"
+        ]
+      }
+    },
+    "Cryptography & System Security": {
+      "CO1": {
+        "name": "Classical Cryptography and Security Services",
+        "keywords": [
+          "playfair",
+          "hill cipher",
+          "transposition cipher",
+          "security services",
+          "security mechanisms",
+          "euler phi",
+          "replay attack",
+          "ipsec overview",
+          "classical encryption"
+        ]
+      },
+      "CO2": {
+        "name": "Symmetric and Asymmetric Cryptography",
+        "keywords": [
+          "des",
+          "aes",
+          "rc4",
+          "diffie hellman",
+          "rsa",
+          "public key",
+          "private key",
+          "s box",
+          "ecb",
+          "cbc",
+          "block cipher",
+          "key distribution",
+          "digital certificate"
+        ]
+      },
+      "CO3": {
+        "name": "Authentication and Hash Functions",
+        "keywords": [
+          "kerberos",
+          "tgs",
+          "message digest",
+          "md5",
+          "sha",
+          "hash function",
+          "hmac",
+          "cmac",
+          "pki",
+          "certificate",
+          "authentication"
+        ]
+      },
+      "CO4": {
+        "name": "Digital Signatures and Authentication Protocols",
+        "keywords": [
+          "digital signature",
+          "rsa signature",
+          "non repudiation",
+          "challenge response",
+          "authentication token",
+          "certificate authority",
+          "signature attacks"
+        ]
+      },
+      "CO5": {
+        "name": "System Security and Network Attacks",
+        "keywords": [
+          "ddos",
+          "packet sniffing",
+          "arp spoofing",
+          "firewall",
+          "ids",
+          "icmp flood",
+          "tcp ip vulnerabilities",
+          "system security"
+        ]
+      },
+      "CO6": {
+        "name": "SSL, IPSEC and PGP",
+        "keywords": [
+          "ssl",
+          "tls",
+          "handshake protocol",
+          "ipsec",
+          "ah",
+          "esp",
+          "transport mode",
+          "tunnel mode",
+          "pgp",
+          "email security"
+        ]
+      }
+    },
+    "Mobile Computing & Communication": {
+      "CO1": {
+        "name": "Cellular Concepts and Mobile Communication Basics",
+        "keywords": [
+          "cellular network",
+          "frequency reuse",
+          "clustering",
+          "spread spectrum",
+          "fhss",
+          "dsss",
+          "cdma",
+          "signal propagation",
+          "antenna",
+          "mobile communication",
+          "telecommunication services"
+        ]
+      },
+      "CO2": {
+        "name": "GSM and GPRS Architecture",
+        "keywords": [
+          "gsm",
+          "gprs",
+          "gsm architecture",
+          "gprs architecture",
+          "handover",
+          "hlr",
+          "eir",
+          "authentication",
+          "mobile originated call",
+          "mobile terminated call"
+        ]
+      },
+      "CO3": {
+        "name": "Mobile IP and Mobility Management",
+        "keywords": [
+          "mobile ip",
+          "agent discovery",
+          "agent advertisement",
+          "agent registration",
+          "retransmission",
+          "tunneling",
+          "encapsulation",
+          "ip packet delivery",
+          "mobile node",
+          "tcp"
+        ]
+      },
+      "CO4": {
+        "name": "TCP over Wireless Networks and WLAN",
+        "keywords": [
+          "snooping tcp",
+          "mobile tcp",
+          "wlan",
+          "ieee 802.11",
+          "bluetooth",
+          "hidden station",
+          "exposed station",
+          "wireless lan",
+          "wifi security"
+        ]
+      },
+      "CO5": {
+        "name": "IP Mobility Solutions",
+        "keywords": [
+          "ip mobility",
+          "micro mobility",
+          "cellular ip",
+          "reverse tunneling",
+          "registration",
+          "wireless network mobility"
+        ]
+      },
+      "CO6": {
+        "name": "LTE and Next Generation Mobile Networks",
+        "keywords": [
+          "lte",
+          "lte advanced",
+          "son",
+          "self organizing network",
+          "voice over lte",
+          "volte",
+          "1g",
+          "2g",
+          "3g",
+          "4g",
+          "5g"
+        ]
+      }
+    },
+    "System Programming & Compiler Construction": {
+      "CO1": {
+        "name": "System Software Fundamentals",
+        "keywords": [
+          "system programming",
+          "system software",
+          "application software",
+          "compiler",
+          "interpreter",
+          "assembler",
+          "loader",
+          "linker"
+        ]
+      },
+      "CO2": {
+        "name": "Assemblers",
+        "keywords": [
+          "two pass assembler",
+          "pass 1",
+          "pass 2",
+          "forward reference",
+          "literal table",
+          "symbol table",
+          "assembler directives",
+          "imperative statements",
+          "declarative statements"
+        ]
+      },
+      "CO3": {
+        "name": "Macro Processors",
+        "keywords": [
+          "macro",
+          "macro processor",
+          "macro expansion",
+          "macro call",
+          "nested macro",
+          "conditional macro",
+          "single pass macro",
+          "two pass macro"
+        ]
+      },
+      "CO4": {
+        "name": "Loaders and Linkers",
+        "keywords": [
+          "loader",
+          "linker",
+          "relocation",
+          "direct linking loader",
+          "absolute loader",
+          "dynamic linking",
+          "dynamic loading"
+        ]
+      },
+      "CO5": {
+        "name": "Compiler Analysis and Parsing",
+        "keywords": [
+          "token",
+          "lexeme",
+          "pattern",
+          "lexical analysis",
+          "predictive parser",
+          "operator precedence parser",
+          "slr",
+          "ll1",
+          "syntax directed translation",
+          "compiler phases"
+        ]
+      },
+      "CO6": {
+        "name": "Intermediate Code and Code Optimization",
+        "keywords": [
+          "three address code",
+          "syntax tree",
+          "dag",
+          "intermediate code",
+          "code optimization",
+          "code generation",
+          "constant propagation",
+          "dead code elimination",
+          "common subexpression"
+        ]
+      }
+    },
+    "Artificial Intelligence": {
+      "CO1": {
+        "name": "Introduction to AI",
+        "keywords": [
+          "artificial intelligence",
+          "ai",
+          "intelligent system",
+          "intelligent systems",
+          "categorization of intelligent systems",
+          "foundations of ai",
+          "components of ai",
+          "applications of ai",
+          "history of ai",
+          "sub areas of ai"
+        ]
+      },
+      "CO2": {
+        "name": "Intelligent Agents",
+        "keywords": [
+          "agent",
+          "agents",
+          "rational agent",
+          "environment",
+          "types of agents",
+          "learning agent",
+          "problem solving agent",
+          "state space",
+          "problem formulation",
+          "goal test",
+          "successor function",
+          "cost function"
+        ]
+      },
+      "CO3": {
+        "name": "Problem Solving",
+        "keywords": [
+          "bfs",
+          "breadth first search",
+          "dfs",
+          "depth first search",
+          "depth limited search",
+          "iterative deepening",
+          "dfid",
+          "a*",
+          "a star",
+          "best first search",
+          "heuristic",
+          "hill climbing",
+          "simulated annealing",
+          "genetic algorithm",
+          "minimax",
+          "min max",
+          "alpha beta",
+          "alpha beta pruning",
+          "search algorithm"
+        ]
+      },
+      "CO4": {
+        "name": "Knowledge and Reasoning",
+        "keywords": [
+          "propositional logic",
+          "predicate logic",
+          "first order logic",
+          "fol",
+          "knowledge representation",
+          "knowledge based agent",
+          "forward chaining",
+          "backward chaining",
+          "resolution",
+          "unification",
+          "inference",
+          "belief network",
+          "bayesian network",
+          "uncertainty"
+        ]
+      },
+      "CO5": {
+        "name": "Planning and Learning",
+        "keywords": [
+          "planning",
+          "partial order planning",
+          "hierarchical planning",
+          "conditional planning",
+          "state space planning",
+          "learning",
+          "pac learning",
+          "machine learning",
+          "reinforcement learning",
+          "active reinforcement learning",
+          "passive reinforcement learning",
+          "theory of learning"
+        ]
+      },
+      "CO6": {
+        "name": "AI Applications",
+        "keywords": [
+          "robot",
+          "robotics",
+          "robot navigation",
+          "nlp",
+          "natural language processing",
+          "language model",
+          "grammar",
+          "parse tree",
+          "parsing",
+          "healthcare",
+          "banking",
+          "retail"
+        ]
+      }
+    }
+  }
+}
