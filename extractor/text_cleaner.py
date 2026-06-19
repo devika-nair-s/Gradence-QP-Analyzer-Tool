@@ -3,6 +3,12 @@ import re
 def clean_ocr_text(text):
 
     text = re.sub(
+    r'Q\s*([1-6])\s*([a-f])',
+    r'\nQ\1\n\2\n',
+    text,
+    flags=re.IGNORECASE
+    )
+    text = re.sub(
         r'Page\s+\d+\s+of\s+\d+',
         '',
         text,
@@ -51,5 +57,36 @@ def clean_ocr_text(text):
     text = re.sub(r'\n\s*\n+', '\n', text)
 
     text = re.sub(r'φ\(\d+\)', ' ', text)
+    # Put question markers on separate lines
+
+    text = re.sub(
+        r'(Q\d+\s*[a-f]\))',
+        r'\n\1\n',
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(
+        r'(Q\d+[a-f]\))',
+        r'\n\1\n',
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(
+        r'([1-9]\s*[a-f]\))',
+        r'\n\1\n',
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(
+        r'([1-9][a-f]\))',
+        r'\n\1\n',
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(r'\n+', '\n', text)
 
     return text.strip()

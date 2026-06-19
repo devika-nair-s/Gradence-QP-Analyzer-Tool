@@ -19,11 +19,16 @@ def extract_questions(pdf_path):
 
         raw_text = extract_text_pdf(pdf_path)
 
+        print("\n===== RAW TEXT =====")
+        print(raw_text[:3000])
+
     else:
 
         print("Using OCR extraction")
 
         raw_text = extract_scanned_pdf(pdf_path)
+        print("\n===== RAW TEXT =====")
+        print(raw_text[:3000])
 
     # SUBJECT DETECTION HERE
     subject = detect_subject(raw_text)
@@ -33,9 +38,20 @@ def extract_questions(pdf_path):
     print(subject)
 
     cleaned_text = clean_ocr_text(raw_text)
+    print("\n===== CLEANED TEXT =====")
+    print(cleaned_text[:10000])
 
+    print("\n===== CLEANED TEXT END =====")
     questions = parse_questions(cleaned_text)
+    print("\n===== QUESTIONS AFTER PARSER =====")
 
+    for q in questions:
+        print(q)
+
+    print("\n===== PARSED QUESTIONS =====")
+
+    for q in questions:
+        print(q["question_no"], "->", q["question"][:100])
     return {
     "subject": subject,
     "questions": questions

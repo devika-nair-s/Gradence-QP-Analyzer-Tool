@@ -464,47 +464,103 @@
         ]
       }
     },
-    "Quantitative Analysis": {
+    "Quantitative Analysis (DLOC)": {
       "CO1": {
         "name": "Estimation Theory",
         "keywords": [
-          "moments",
-          "estimator",
-          "likelihood",
-          "mle",
-          "properties of good estimator"
+          "statistics",
+          "functions of statistics",
+          "uses of statistics",
+          "limitations of statistics",
+          "bar chart",
+          "pie chart",
+          "tabulation",
+          "tabular form",
+          "mean deviation",
+          "skewness"
         ]
       },
       "CO2": {
         "name": "Regression and Correlation",
         "keywords": [
-          "regression",
-          "correlation",
-          "mae",
-          "mape",
-          "ssr",
-          "sse",
-          "coefficient of determination"
+          "collection of statistical data",
+          "primary data",
+          "secondary data",
+          "questionnaire",
+          "schedule",
+          "sampling",
+          "stratified sampling",
+          "histogram",
+          "frequency polygon",
+          "ogive",
+          "frequency distribution"
         ]
       },
       "CO3": {
         "name": "Hypothesis Testing",
         "keywords": [
-          "null",
-          "alternative",
-          "hypothesis",
-          "significance level",
-          "f-test"
+          "regression",
+          "least square regression",
+          "simple linear regression",
+          "correlation",
+          "correlation coefficient",
+          "regression coefficient",
+          "coefficient of correlation",
+          "prediction",
+          "sales volume",
+          "test scores",
+          "mae",
+          "mape"
         ]
       },
       "CO4": {
         "name": "Probability Distributions",
         "keywords": [
-          "normal distribution",
-          "skewness",
-          "kurtosis",
-          "mean",
-          "variance"
+          "multiple regression",
+          "multiple linear regression",
+          "partial correlation",
+          "multiple correlation",
+          "coefficient of determination",
+          "r square",
+          "r2",
+          "significance of regression",
+          "regression model",
+          "multivariate distribution"
+        ]
+      },
+      "CO5": {
+        "name": "Probability Distributions",
+        "keywords": [
+          "random variable",
+          "mathematical expectation",
+          "point estimation",
+          "estimation",
+          "method of moments",
+          "moments",
+          "maximum likelihood",
+          "mle",
+          "likelihood",
+          "unbiased estimator",
+          "consistency",
+          "properties of estimator",
+          "sampling distribution"
+        ]
+      },
+      "CO6": {
+        "name": "Probability Distributions",
+        "keywords": [
+          "hypothesis testing",
+          "null hypothesis",
+          "alternative hypothesis",
+          "critical region",
+          "acceptance region",
+          "neyman pearson lemma",
+          "test of significance",
+          "large sample test",
+          "single mean",
+          "difference between means",
+          "z test",
+          "testing of hypothesis"
         ]
       }
     },

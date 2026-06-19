@@ -12,7 +12,8 @@ KNOWN_SUBJECTS = [
     "Computer Networks",
     "Machine Learning",
     "Big Data Analytics",
-    "Cloud Computing"
+    "Cloud Computing",
+    "Quantitative Analysis (DLOC)"
 ]
 
 
@@ -58,5 +59,8 @@ def detect_subject(text):
 
     if "compiler construction" in text_lower:
         return "System Programming & Compiler Construction"
+    
+    if "quantitative analysis" in text_lower:
+        return "Quantitative Analysis"
 
     return "Unknown Subject"

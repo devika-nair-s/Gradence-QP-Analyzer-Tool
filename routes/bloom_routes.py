@@ -12,6 +12,7 @@ from services.co_mapper import map_question_to_co
 
 bloom_bp = Blueprint("bloom", __name__)
 
+
 @bloom_bp.route("/analyze", methods=["POST"])
 def analyze_paper():
 
@@ -31,59 +32,72 @@ def analyze_paper():
 
     try:
 
-        result = extract_questions(
-            temp_pdf.name
-        )
+        result = extract_questions(temp_pdf.name)
 
-        subject = result["subject"]
-        questions = result["questions"]
+        subject = result.get("subject", "Unknown Subject")
+        questions = result.get("questions", [])
 
-        print("\nSUBJECT:", subject)
-        print("TOTAL QUESTIONS:", len(questions))
+        print("\n==============================")
+        print("SUBJECT:", subject)
+        print("TOTAL EXTRACTED:", len(questions))
+        print("==============================")
 
         print("\n===== RAW QUESTIONS =====")
 
         for i, q in enumerate(questions):
             print(i, type(q), q)
 
+        # ---------------- FILTER ----------------
+
         filtered = []
 
         for q in questions:
 
-            print("ITEM:", q)
-            print("TYPE:", type(q))
+            if not isinstance(q, dict):
+                print("SKIPPED (not dict):", q)
+                continue
 
-            if isinstance(q, dict):
+            question_text = q.get("question", "").strip()
 
-                if is_valid_question(q["question"]):
-                    filtered.append(q)
+            print("\nCHECKING QUESTION:")
+            print(question_text[:150])
+
+            valid = is_valid_question(question_text)
+
+            print("VALID =", valid)
+
+            if valid:
+                filtered.append(q)
 
         questions = filtered
+
+        print("\n===== AFTER FILTER =====")
+        print("TOTAL AFTER FILTER:", len(questions))
+
+        for q in questions:
+            print(q)
+
+        # ---------------- ANALYSIS ----------------
 
         predictions = []
         co_mapping = []
         cleaned_questions = []
 
         for q in questions:
-            print("\nCURRENT Q:")
-            print(q)
-            print(type(q))
 
             cleaned = clean_question(
-                q["question"]
+                q.get("question", "")
             )
-            print("CLEANED:")
-            print(cleaned)
-            print(type(cleaned))
 
-            bloom = predict_bloom(
-                cleaned
-            )
+            print("\nCLEANED QUESTION:")
+            print(cleaned)
+
+            bloom = predict_bloom(cleaned)
 
             co = map_question_to_co(
-            cleaned,
-            subject
-        )
+                cleaned,
+                subject
+            )
 
             cleaned_questions.append(cleaned)
             predictions.append(bloom)
@@ -97,13 +111,22 @@ def analyze_paper():
             else "Unknown"
         )
 
-        return jsonify({
+        print("\n===== RESPONSE =====")
+        print("TOTAL QUESTIONS =", len(cleaned_questions))
+        print("OVERALL =", overall)
+
+        response = {
             "total_questions": len(cleaned_questions),
             "overall_difficulty": overall,
             "questions": cleaned_questions,
             "predictions": predictions,
-            "co_mapping": co_mapping
-        })
+            "co_mapping": co_mapping,
+            "subject": subject
+        }
+
+        print(response)
+
+        return jsonify(response)
 
     except Exception as e:
 
@@ -118,4 +141,3 @@ def analyze_paper():
 
         if os.path.exists(temp_pdf.name):
             os.remove(temp_pdf.name)
-

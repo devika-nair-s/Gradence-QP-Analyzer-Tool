@@ -1,106 +1,78 @@
 import re
 
-
-def clean_text(text):
-    """
-    Remove watermark garbage and unnecessary text.
-    """
-
-    # Remove long watermark codes
-    text = re.sub(r'\b[A-Z0-9]{10,}\b', ' ', text)
-
-    # Remove page numbers
-    text = re.sub(r'Page\s+\d+\s+of\s+\d+', ' ', text, flags=re.IGNORECASE)
-
-    # Remove repeated spaces
-    text = re.sub(r'[ \t]+', ' ', text)
-    
-    return text.strip()
-
-
-import re
-
-import re
-
-
 def parse_questions(text):
-
-    text = clean_text(text)
 
     questions = []
 
-    current_q = None
+    current_main = None
+    current_sub = None
+    current_text = []
 
     lines = text.splitlines()
 
-    i = 0
+    for line in lines:
 
-    while i < len(lines):
+        line = line.strip()
 
-        line = lines[i].strip()
-
-        # Detect Q1. or Q2.
-        if re.match(r'^Q\d+\.?$', line, re.IGNORECASE):
-            current_q = line.replace(".", "")
-            i += 1
+        if not line:
             continue
 
-        # Detect plain 1,2,3,4,5,6
-        if re.match(r'^[1-6]$', line):
-            current_q = f"Q{line}"
-            i += 1
+        # Q1 / Q2 / Q3
+        q_match = re.match(
+            r'^Q\s*(\d+)\.?',
+            line,
+            re.IGNORECASE
+        )
+
+        if q_match:
+
+            if current_main and current_sub and current_text:
+
+                questions.append({
+                    "question_no": f"Q{current_main}({current_sub})",
+                    "question": " ".join(current_text).strip()
+                })
+
+            current_main = q_match.group(1)
+            current_sub = None
+            current_text = []
             continue
 
-        # Detect a,b,c,d,e,f
-        if re.match(r'^[a-f]\.?$', line, re.IGNORECASE):
+        # a. b. c. d.
+        sub_match = re.match(
+            r'^([a-f])[\.\)]?\s*(.*)',
+            line,
+            re.IGNORECASE
+        )
 
-            sub = line[0].lower()
+        if sub_match:
 
-            question_text = []
+            if current_main and current_sub and current_text:
 
-            i += 1
+                questions.append({
+                    "question_no": f"Q{current_main}({current_sub})",
+                    "question": " ".join(current_text).strip()
+                })
 
-            while i < len(lines):
+            current_sub = sub_match.group(1).lower()
 
-                next_line = lines[i].strip()
+            first_text = sub_match.group(2).strip()
 
-                # Stop when next question starts
-                if re.match(r'^[a-f]\.?$', next_line, re.IGNORECASE):
-                    break
+            current_text = []
 
-                if re.match(r'^Q\d+\.?$', next_line, re.IGNORECASE):
-                    break
-
-                if re.match(r'^[1-6]$', next_line):
-                    break
-
-                question_text.append(next_line)
-
-                i += 1
-
-            questions.append({
-                "question_no": f"{current_q}({sub})",
-                "question": " ".join(question_text).strip()
-            })
+            if first_text:
+                current_text.append(first_text)
 
             continue
 
-        i += 1
+        if current_sub:
+            current_text.append(line)
+
+    if current_main and current_sub and current_text:
+
+        questions.append({
+            "question_no": f"Q{current_main}({current_sub})",
+            "question": " ".join(current_text).strip()
+        })
 
     return questions
-
-from extractor.scanned_pdf import extract_scanned_pdf
-from extractor.text_cleaner import clean_ocr_text
-from extractor.question_parser import parse_questions
-from services.question_postprocessor import fix_question_numbers
-
-pdf_path = "test_files/be_computer-engineering_semester-6_2022_december_artificial-intelligencerev-2019-c-scheme.pdf"
-
-raw_text = extract_scanned_pdf(pdf_path)
-
-cleaned_text = clean_ocr_text(raw_text)
-
-questions = parse_questions(cleaned_text)
-
-# NEW LINE
-questions = fix_question_numbers(questions)
